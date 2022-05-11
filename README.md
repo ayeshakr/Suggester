@@ -1,4 +1,4 @@
-#Suggester
+# Suggester
 A nifty little slack app that will provide you and your coworkers with the suggestions you need to have a great lunch or a happy hour!
 ## Usage
 For A+ lunch plans:
