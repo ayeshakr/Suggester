@@ -1,4 +1,4 @@
-const {geocode, nearbySearch} = require('./maps-service');
+const {geocode, nearbySearch} = require('../services/maps-service');
 
 // Listens to incoming commands
 const setupCommand = async (app) => {

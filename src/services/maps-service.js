@@ -1,5 +1,4 @@
 const { Client } = require("@googlemaps/google-maps-services-js");
-const _ = require('lodash');
 require('dotenv').config()
 
 const client = new Client({});

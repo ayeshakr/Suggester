@@ -1,4 +1,4 @@
-const { setupCommand } = require("./command");
+const { setupCommand } = require("./commands/command");
 const { App } = require('@slack/bolt');
 require('dotenv').config()
 
