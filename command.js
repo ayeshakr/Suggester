@@ -32,7 +32,7 @@ const setupCommand = async (app) => {
             text: `:fork_and_knife: Got some resto suggestions for y'all! \n`
           },
         },
-        ...getFormattedResults(results)
+        ..._getFormattedResults(results)
       ],
     });
   });
@@ -66,7 +66,7 @@ const setupCommand = async (app) => {
             text: `:cocktail: Got some happiest hour suggestions for y'all! \n`
           },
         },
-        ...getFormattedResults(results)
+        ..._getFormattedResults(results)
       ],
     });
   });
@@ -74,7 +74,7 @@ const setupCommand = async (app) => {
 
 }
 
-const getFormattedResults = (results) => {
+const _getFormattedResults = (results) => {
   return results.map(res => ({
     type: 'section',
     text: {

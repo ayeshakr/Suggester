@@ -6,6 +6,7 @@ const client = new Client({});
 
 const geocode = async (address) => {
   try {
+    // Take address supplied by the user and convert to lat/lng
     const response = await client.geocode({
       params: {
         address,
@@ -20,6 +21,7 @@ const geocode = async (address) => {
 
 const nearbySearch = async (keyword, latLong, type) => {
   try {
+    // Grab a list of nearby POIs
     const response = await client.placesNearby({
       params: {
         location: `${latLong.lat},${latLong.lng}`,
@@ -29,7 +31,7 @@ const nearbySearch = async (keyword, latLong, type) => {
         type: type
       }
     })
-
+    // Grab the first 5 results and extract relevant info + another call to grab their maps urls
     return await Promise.all(response.data.results.slice(0, 5).map(async res => ({
       name: res.name,
       address: res.vicinity,
